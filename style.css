@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+    font-family:'DynaPuff', cursive;
+    position: relative;
+    min-height: 100%;
+    color: rgb(99, 0, 77);
+}
+
+body {
+    background-color: rgb(255, 240, 242);
+}
+
+.main-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 700px;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    background-color: rgb(232, 213, 253);
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.hide-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title {
+    display: block;
+    justify-self: center;
+    padding-top: 30px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(252, 168, 255);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.game-container {
+    transform: scale(1);
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    border: 1px solid black;
+}
+
+.grid {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    font-size: 100px;
+    transition: 0.2s ease-in-out;
+}
+
+.grid:hover {
+    background-color: rgb(255, 208, 227);
+    filter: brightness(110%);
+    opacity: 95%;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.player-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.player {
+    transition: 0.3s ease-in-out;
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    scale: 150%;
+    filter: brightness(250%);
+}
+
+.btn {
+    font-family:'DynaPuff', cursive;
+    border: none;
+    border-radius: 40px 1px;
+    padding: 20px;
+    background-color: pink;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    scale: 110%;
+    filter: brightness(105%);
+}
+
+button {
+    cursor: pointer;
+    color: rgb(99, 0, 77);
+}
+
+button:hover {
+    filter: brightness(95%);
+}
+
+#playBtn {
+    width: 500px;
+    height: 300px;
+    font-size: x-large;
+    border-radius: 200px 1px;
+}
+
+.modal {
+    line-height: 70px;
+    text-align: center;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 220px;
+    border: solid 2px rgb(253, 183, 255);
+    border-radius: 10px 10px;
+    transition: 0.3 ease-in-out;
+}
+
+.modal::backdrop {
+    background-color: rgb(187, 174, 189);
+    opacity: 55%;
+}
+
+.winner {
+    font-size: xx-large;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
